@@ -4,11 +4,16 @@ body {
 }
 
 input {
-  height: 1rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  margin: 1rem;
 }
 
 button {
-  height: 1rem;
+  height: 2rem;
+  background-color: lightgrey;
+  font-size: 1.5rem;
+  margin: 1rem;
 }
 
 ul {
@@ -19,7 +24,5 @@ ul {
 
 li {
   margin: 1rem;
-  height: 2rem;
-  width: 20rem;
-  border: 1px solid darkgray;
+  font-size: 1.5rem;
 }
