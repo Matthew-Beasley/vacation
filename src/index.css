@@ -3,12 +3,6 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
 }
 
-form . * {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
-}
-
 input {
   height: 1rem;
 }

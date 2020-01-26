@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import moment from 'moment';
+import UI from './UI';
 
 
 function App() {
@@ -90,19 +90,8 @@ function App() {
 
   return (
     <div className="container">
-      <h3>{currentUser.fullName} Vacation Count is {vacations.length}</h3>
-      <form onSubmit={ev => createVacation(ev)}>
-        <input type="date" onChange={ev => setStartDate(ev.target.value)}/>
-        <input type="date" onChange={ev => setEndDate(ev.target.value)} />
-        <button type="submit">Create Vacation</button>
-      </form>
-      <ul>
-        {vacations.map((vacation, idx) => {
-          return <li key={idx}>From {
-            moment(vacation.startDate, 'YYYY-MM-DD').format('MM/DD/YYYY')}  to  {moment(vacation.endDate, 'YYYY-MM-DD').format('MM/DD/YYYY')}
-            <button onClick={() => sendDelete(vacation, idx)}>X</button></li>
-        })}
-      </ul>
+      <UI setStartDate={setStartDate} setEndDate={setEndDate} vacations={vacations}
+        createVacation={createVacation} sendDelete={sendDelete} currentUser={currentUser} />
     </div>
   );
 }
